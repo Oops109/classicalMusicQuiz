@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">classic Music Quiz</string>
+    <string name="question_1">Who has written the symphony used for the E.U. anthem ?</string>
+    <string name="question_1_answer_1">Mozart</string>
+    <string name="question_1_answer_2">Schubert</string>
+    <string name="question_1_answer_3">Beethoven</string>
+    <string name="question_1_answer_4">Verdi</string>
+    <string name="question_2">Who drawn his inspiration from American
+            Indian music during his journey in 1893 ?</string>
+    <string name="question_2_answer_1">Bartok</string>
+    <string name="question_2_answer_2">Dvorak</string>
+    <string name="question_2_answer_3">Gershwin</string>
+    <string name="question_2_answer_4">Bernstein</string>
+    <string name="question_3">Who was the first compositor
+            as successful and worship as a Rock Star ?</string>
+    <string name="question_3_answer_1">Puccini</string>
+    <string name="question_3_answer_2">Beethoven</string>
+    <string name="question_3_answer_3">Rossini</string>
+    <string name="question_3_answer_4">Mozart</string>
+    <string name="question_4">Who wrote the largest number of Musical plays ?</string>
+    <string name="question_4_answer_1">Mozart</string>
+    <string name="question_4_answer_2">Bach</string>
+    <string name="question_4_answer_3">Schubert</string>
+    <string name="question_4_answer_4">Telemann</string>
+    <string name="question_5">Which one loves going fishing for trout ?</string>
+    <string name="question_5_answer_1">Strauss</string>
+    <string name="question_5_answer_2">Liszt</string>
+    <string name="question_5_answer_3">Schubert</string>
+    <string name="question_5_answer_4">Bach</string>
+    <string name="question_6">How many brothers and sisters Johan Sebastian Bach had ?</string>
+    <string name="question_6_answer_1">3</string>
+    <string name="question_6_answer_2">5</string>
+    <string name="question_6_answer_3">7</string>
+    <string name="question_6_answer_4">9</string>
+
+    <string name="score_message_1">Good job! you have made</string>
+    <string name="score_message_2">Sorry you have only made</string>
+    <string name="score_message_3">questions</string>
+    <string name="correct_answers">correct answers</string>
+    <string name="total_question">out of a total of</string>
+    <string name="question_not_answered">You missed</string>
+    <string name="perfect_score">Congratulations! You answer all correctly</string>
+
+    <string name="submit_button_text">Submit</string>
+    <string name="finish_button_text">Finish</string>
+    <string name="try_again_button_text">Try Again</string>
+    <string name="start_button_text">Start</string>
+    <string name="view_answers_text">View Answers</string>
+    <string name="userGreetings">Hello</string>
+    <string name="alertDialog">Classic Music Quiz</string>
+
+    <string name="no_input_name">Please enter your name</string>
+    <string name="name">Name</string>
+    <string name="welcome_message">Are you an expert in Classical Music?</string>
+</resources>
