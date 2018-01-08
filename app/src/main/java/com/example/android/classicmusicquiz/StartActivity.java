@@ -34,6 +34,7 @@ public class StartActivity extends AppCompatActivity {
                             MainActivity.class));
                     myIntent.putExtra("userName", userName);
                     startActivityForResult(myIntent, 0);
+                    finish();
                 }
 
 

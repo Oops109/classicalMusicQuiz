@@ -63,11 +63,11 @@ public class MainActivity extends AppCompatActivity {
                 builder.setMessage(message);
 
 
-                // Button in AlertDialog to finish, try again or show goods answers
+                // Button in AlertDialog to finish, try again or show good answers
                 builder.setPositiveButton(R.string.finish_button_text,
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-                                // Write your code here to execute after dialog
+                                // finish MainActivity
                                 Intent intent = new Intent();
                                 setResult(RESULT_OK, intent);
                                 finish();
@@ -84,8 +84,8 @@ public class MainActivity extends AppCompatActivity {
                 builder.setNeutralButton(R.string.try_again_button_text,
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-                                // re start the quiz
-                                setContentView(R.layout.activity_main);
+                                // re start the quiz without cancelling answers
+                                dialog.cancel();
                             }
                         });
                 // create and show the alert dialog
@@ -197,5 +197,6 @@ public class MainActivity extends AppCompatActivity {
         questionThreeCorrectAnswer.setTextColor(getResources().getColor(R.color.correctAnswers));
         questionFourCorrectAnswer.setTextColor(getResources().getColor(R.color.correctAnswers));
         questionFiveCorrectAnswer.setTextColor(getResources().getColor(R.color.correctAnswers));
+        questionSixCorrectAnswer.setTextColor(getResources().getColor(R.color.correctAnswers));
     }
 }
