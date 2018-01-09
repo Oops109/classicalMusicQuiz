@@ -2,10 +2,10 @@
 <resources>
     <string name="app_name">Quiz de musique Classique</string>
     <string name="question_1">Qui a écrit la symphonie utilisée pour l\'hymne européen ?</string>
-    <string name="question_2">Qui s\'est inspiré des Amérindiens pour sa symphonie lors de son voyage en 1893 ?</string>
-    <string name="question_3">Qui a été le premier compositeur a avoir été aussi célébre qu\'une Rock Star ?</string>
-    <string name="question_4">Qui a été le compositeur a avoir écrit le plus grand nombre d\'oeuvre ?</string>
-    <string name="question_5">Quel est le compositeur aimant aller à la pèche à la truite ?</string>
+    <string name="question_2">Qui s\'est inspiré des Amérindiens lors de son voyage en 1893 ?</string>
+    <string name="question_3">Qui a été le premier a avoir été aussi célébre qu\'une Rock Star ?</string>
+    <string name="question_4">Qui a été le compositeur a avoir écrit le plus d\'oeuvre ?</string>
+    <string name="question_5">Quel compositeur aimait aller à la pèche à la truite ?</string>
     <string name="question_6">Combien Jean-Sebastien Bach a-t\'il eu de frères et soeurs?</string>
     <string name="score_message_1">Joli travail! Tu as donné</string>
     <string name="score_message_2">Désolé, tu as donné seulement</string>

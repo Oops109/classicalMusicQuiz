@@ -3,6 +3,8 @@ package com.example.android.classicmusicquiz;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -55,28 +57,42 @@ public class MainActivity extends AppCompatActivity {
 
             public void onClick(View view) {
                 int[] results = checkAnswers();
+                final MediaPlayer mMediaPlayer;
                 String message = createMessage(results, totalQuestions, userName);
                 // setup the alert builder
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setTitle(R.string.alertDialog);
                 builder.setIcon(R.drawable.trompet);
                 builder.setMessage(message);
+                // play wining music
+                if (results[0]>= 3) {
+                    mMediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.ueanthem);
+                    mMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+                    mMediaPlayer.start();
+                    // play losing music
+                } else {
+                    mMediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.requiem);
+                    mMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+                    mMediaPlayer.start();
+                }
 
 
                 // Button in AlertDialog to finish, try again or show good answers
                 builder.setPositiveButton(R.string.finish_button_text,
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-                                // finish MainActivity
+                                // finish MainActivity and stop music
                                 Intent intent = new Intent();
                                 setResult(RESULT_OK, intent);
+                                mMediaPlayer.stop();
                                 finish();
                             }
                         });
                 builder.setNegativeButton(R.string.view_answers_text,
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-                                // See good answers
+                                // See good answers and stop music
+                                mMediaPlayer.stop();
                                 highlightCorrectAnswers();
                             }
                         });
@@ -84,7 +100,8 @@ public class MainActivity extends AppCompatActivity {
                 builder.setNeutralButton(R.string.try_again_button_text,
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-                                // re start the quiz without cancelling answers
+                                // re start the quiz without cancelling answers and stop music
+                                mMediaPlayer.stop();
                                 dialog.cancel();
                             }
                         });
